@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/golf_4-SF.mp3-39b5ca7532de7fc3f86b20481dbfce20.mp3str"
+
+[deps]
+
+source_file="res://Ball/golf_4-SF.mp3"
+dest_files=[ "res://.import/golf_4-SF.mp3-39b5ca7532de7fc3f86b20481dbfce20.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

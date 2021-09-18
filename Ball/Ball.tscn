@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Ball/Ball.cs" type="Script" id=1]
+[ext_resource path="res://Ball/10-107457_silver-medal-blank-png.png" type="Texture" id=2]
+[ext_resource path="res://Ball/arrow.png" type="Texture" id=3]
+[ext_resource path="res://Ball/golf_4-SF.mp3" type="AudioStream" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 5.34257
+
+[node name="Ball" type="RigidBody2D" groups=[
+"Ball",
+]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+HitSound = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 20.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

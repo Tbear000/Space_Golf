@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Flag/Flag.cs" type="Script" id=1]
+[ext_resource path="res://Flag/Flag.png" type="Texture" id=2]
+[ext_resource path="res://Flag/OffScreen Pointer/OffScreenNotifier.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Flag/golf_1-SF.mp3" type="AudioStream" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22.3919, 13.3011 )
+
+[node name="Flag" type="Area2D" groups=[
+"Flags",
+]]
+script = ExtResource( 1 )
+HoleSound = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -8, -535 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 4.68164
+margin_top = -124.916
+margin_right = 12.6816
+margin_bottom = -110.916
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OffScreenNotifier" parent="." instance=ExtResource( 3 )]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://AudioManager/AudioManager.cs" type="Script" id=1]
+[ext_resource path="res://AudioManager/DavidKBD - HexaPuppies Pack - 10 - New Horizons - 1.ogg" type="AudioStream" id=2]
+
+[node name="AudioManager" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+GameMusic = ExtResource( 2 )
